@@ -9,22 +9,29 @@
         <script src="resources/vendor/jquery-3.5.1.slim.min.js"></script>
         <script src="resources/vendor/popper.min.js"></script>
         <script src="resources/vendor/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="resources/vendor/fontawesome-free/css/all.min.css" />
+         <!-- <link rel="stylesheet"href="resources/vendor/fontawesome-free/css/all.min.css"/> -->
+         <script src="https://kit.fontawesome.com/25d5178727.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="resources/css/styles.css" />
     </head>
 
     <body>
         <header>
-
+            <div class="jumbotron">
+                <h1 class="display-4">IT-3049C Chat</h1>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fa-regular fa-user"></i>
+                        </span>
+                    </div>
+                    <input id="my-name-input" type="text"class="form-control" placeholder="Name" value="Andrew Schwirzinski"/>
+                </div>
+            </div>
         </header>
 
-        <div id="chat">
+        <div id="chat"></div>
 
-        </div>
-        
-        <footer>
-
-        </footer>
+        <footer></footer>
         <!-- Our own Scripts -->
         <script src="resources/js/index.js"></script>
     </body>

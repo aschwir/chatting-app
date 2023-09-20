@@ -24,3 +24,4 @@ how many points out of 20 do you deserve on this assignment:
 
 ## Discussion Questions:
 1. What does the bootstrap `display-4` class do?
+display-4 , styles the heading text in a bold way to make it stand out a bit more. Its the smallest size out of the four bootstrap display classes. 
