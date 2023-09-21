@@ -79,5 +79,4 @@ sendButton.addEventListener("click",function(e){
 })
 
 updateMessages();
-
 setInterval(updateMessages, MILLISECONDS_IN_TEN_SECONDS);
