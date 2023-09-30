@@ -124,26 +124,3 @@ function insertCurrentUser(){
 updateMessages();
 setInterval(updateMessages, MILLISECONDS_IN_TEN_SECONDS);
 console.log(currentUser);
-
-
-/** check for current user
- * if user exsists enable message box
- * placeholder is current user
- * 
- * if user does not exsist save to array and enable text box
- * placeholder is current user
- * 
- * edit button
- * find index of current user
- * user[index] = edited value
- * 
- * 
- * 
- * 
- */ // if(nameInput.value != ""){ 
-    //     if(!siteData.userNames.includes(nameInput.value)){
-    //     siteData.userNames.push(nameInput.value)
-    //     localStorage.setItem("siteData", JSON.stringify(siteData));
-    //     myMessage.disabled = false;  
-    //     }
-    // }
