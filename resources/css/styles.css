@@ -120,3 +120,11 @@ footer {
   background: white;
   border-bottom-left-radius: 10px;
 }
+
+#save-button{
+  margin-left: 5px;
+}
+
+#currentUser{
+  margin-left: 5px;
+}

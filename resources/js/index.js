@@ -2,14 +2,24 @@ const nameInput = document.getElementById("my-name-input");
 const myMessage = document.getElementById("my-message");
 const sendButton = document.getElementById("send-button");
 const chatBox = document.getElementById("chat");
+const saveButton = document.getElementById("save-button");
+const editButton = document.getElementById("edit-button");
+const currentUse = document.getElementById("currentUser");
 
 const serverURL = "https://it3049c-chat.fly.dev/messages"
 const MILLISECONDS_IN_TEN_SECONDS = 10000;
+let currentUser = nameInput.value;
 
+let siteData = {
+    "user" : "Users",
+    "userNames" : []
+}
 
+nameInput.value = "";
 
-
-myMessage.disabled = true;
+if(nameInput.value == ""){
+    myMessage.disabled = true;
+}
 
  async function updateMessages() {
    const messages = await fetchMessages(); 
@@ -83,5 +93,57 @@ sendButton.addEventListener("click",function(e){
   myMessage.value = "";
 })
 
+saveButton.addEventListener('click', function(e){
+    e.preventDefault();
+    let userexsists = siteData.userNames.includes(nameInput.value)
+
+    if(!userexsists){
+      siteData.userNames.push(nameInput.value);
+      localStorage.setItem(siteData,JSON.stringify(siteData))
+    } 
+    currentUser = nameInput.value; 
+    myMessage.disabled = false;
+    nameInput.value = "";
+    insertCurrentUser();
+})
+
+editButton.addEventListener('click', function(e){
+    e.preventDefault();
+    let editedName = prompt("Enter new name.");
+   let index = siteData.userNames.indexOf(currentUser)
+    siteData.userNames[index] = editedName;
+    localStorage.setItem(siteData,JSON.stringify(siteData))
+    currentUser = editedName;
+    insertCurrentUser();
+})
+
+function insertCurrentUser(){
+    currentUse.innerHTML = `Currrent user: ${currentUser}`
+}
+
 updateMessages();
 setInterval(updateMessages, MILLISECONDS_IN_TEN_SECONDS);
+console.log(currentUser);
+
+
+/** check for current user
+ * if user exsists enable message box
+ * placeholder is current user
+ * 
+ * if user does not exsist save to array and enable text box
+ * placeholder is current user
+ * 
+ * edit button
+ * find index of current user
+ * user[index] = edited value
+ * 
+ * 
+ * 
+ * 
+ */ // if(nameInput.value != ""){ 
+    //     if(!siteData.userNames.includes(nameInput.value)){
+    //     siteData.userNames.push(nameInput.value)
+    //     localStorage.setItem("siteData", JSON.stringify(siteData));
+    //     myMessage.disabled = false;  
+    //     }
+    // }
