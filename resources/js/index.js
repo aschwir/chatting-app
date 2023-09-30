@@ -6,6 +6,11 @@ const chatBox = document.getElementById("chat");
 const serverURL = "https://it3049c-chat.fly.dev/messages"
 const MILLISECONDS_IN_TEN_SECONDS = 10000;
 
+
+
+
+myMessage.disabled = true;
+
  async function updateMessages() {
    const messages = await fetchMessages(); 
 
