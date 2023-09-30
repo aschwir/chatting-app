@@ -18,9 +18,9 @@ how many points out of 20 do you deserve on this assignment:
 20/20
 ## Self-Reflection:
 <!-- Write your self-reflection under this line -->
-I feel the concept is fairly simple. Putting things into the JSON format was a bit confusing at first.
+I had tons of github issues, repo disappeared and had to start over, lost all of my commits etc... I had no issues with the assignment itself
 ### How long it took me to finish this?
-12 hours
+10 hours
 
 ## Discussion Questions:
 1. What does the bootstrap `display-4` class do?
